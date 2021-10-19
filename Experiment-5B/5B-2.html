@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Armstrong Number</title>
+</head>
+<body style="background-color: rgb(13, 191, 235);">
+    <header>
+        <section>
+            <p>
+                <h2>
+                    Code to find Armstrong number in the given range
+                </h2>
+            </p>
+            <p>
+                <b>Armstrong Number:</b> It is a number that is equal to the sum of the cubes of its digits. 
+                <br>
+                For example 153.
+                <br>
+                Sum of the cubes of its digit = 1<sup>3</sup> + 5<sup>3</sup> + 3<sup>3</sup> = 1 + 125 + 27 = 153
+            </p>
+        </section>       
+    </header>
+
+    <main>
+        <p><b style="font-size: larger;">Sample code</b></p>
+        <pre>
+            <code>
+                #include <iostream>
+                #include <math.h>
+                using namespace std;
+
+                int main()
+                {
+                    int r, sum, temp, ans;
+                    int x1, x2;
+                    cout << "\n\n Find the Armstrong number for a given range of number:\n";
+                    cout << " Input starting number of range: ";
+                    cin >> x1;
+                    cout << " Input ending number of range: ";
+                    cin >> x2;
+                    cout << " Armstrong numbers in given range are: " << endl;
+                    for (int i = x1; i <= x2; i++) 
+                    {
+                        temp = i;
+                        sum = 0;
+                        while (temp != 0) 
+                        {
+                            r = temp % 10;
+                            ans = pow(r, 3);
+                            sum = sum + ans;
+                            temp = temp / 10;
+                        }
+                        if (sum == i)
+                            cout << i << " ";
+                    }
+                    cout << endl;
+                }        
+            </code>
+            <em>
+                <p><b>Sample Input:</b></p>
+                    Find the Armstrong number for a given range of number:                            
+                    Input starting number of range: 25                                    
+                    Input ending number of range: 200 
+                <p><b>Sample output</b></p>
+                    Armstrong numbers in given range are:                                 
+                    153
+            </em>
+        </pre>
+        
+    <section>
+        <p>
+            <b>Variables used in program-</b>
+            <br>
+            <br>
+            In the above code total 7 variables used. 
+            <br>
+            <br>
+            <var>x1</var> stores the starting number of range. 
+            <br>
+            <var>x2</var> stores end number of range.
+            <br> 
+            <var>i</var> is used for iteration over the range. 
+            <br>
+            <var>temp</var> is tempoarary variable stores current number.
+            <br>
+            <var>sum</var>is used to calculate sum of number.
+            <br>
+            <var>r</var> stores remainder by modulo operation. 
+            <br>
+            <var>ans</var> stores cube of digit.
+        </p>
+        <p><B>Time Complexity-</B></p>
+        <p>Since there  1 nested loop so time complexity of above code is O(n <sup>2</sup> )</p>
+    </section>
+    <hr>
+    <p> Link for Reference</p>
+    <nav>
+        <a href="https://www.w3resource.com/cpp-exercises/numbers/cpp-numbers-exercise-44.php">W3resource</a>
+    </nav>
+    
+    </main>
+    
+</body>
+</html>
